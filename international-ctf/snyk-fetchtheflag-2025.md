@@ -139,7 +139,7 @@ flag{89e575e7272b07a1d33e41e3647b3826}
 * Here's the disassembly of `main` function.
 
 {% code title="main.c" overflow="wrap" lineNumbers="true" %}
-```c
+```csharp
 undefined8 main(EVP_PKEY_CTX *param_1)
 
 {
@@ -157,7 +157,7 @@ undefined8 main(EVP_PKEY_CTX *param_1)
 * And here's the disassembly of `win` function.
 
 {% code title="win.c" overflow="wrap" lineNumbers="true" %}
-```c
+```csharp
 void win(void)
 
 {
@@ -258,7 +258,7 @@ flag{4f4293237e37d06d733772a087299f17}
 * Here's the disassembly of `main` function.
 
 {% code title="main.c" overflow="wrap" lineNumbers="true" %}
-```c
+```csharp
 /* WARNING: Function: __x86.get_pc_thunk.bx replaced with injection: get_pc_thunk_bx */
 
 undefined4 main(void)
@@ -278,7 +278,7 @@ undefined4 main(void)
 * And here's the disassembly of `getFlag` function.
 
 {% code title="getFlag.c" overflow="wrap" lineNumbers="true" %}
-```c
+```csharp
 /* WARNING: Function: __x86.get_pc_thunk.bx replaced with injection: get_pc_thunk_bx */
 
 undefined4 getFlag(int param_1,int param_2)
