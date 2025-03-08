@@ -23,3 +23,7 @@
 ## International-CTF
 
 * [Snyk FetchTheFlag 2025](international-ctf/snyk-fetchtheflag-2025.md)
+
+***
+
+* [Pearl CTF 2025](pearl-ctf-2025.md)

@@ -1,8 +1,8 @@
 ---
-description: >-
-  This event was hosted by Snyk. The event is start at Friday and the duration
-  is only 12 hours.
 icon: wolf-pack-battalion
+description: >-
+  This event was hosted by Snyk. Only 12 hours CTF challenges with various
+  categories.
 cover: >-
   https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxoYWNrfGVufDB8fHx8MTc0MDg3NTc3MXww&ixlib=rb-4.0.3&q=85
 coverY: 0
@@ -12,6 +12,10 @@ coverY: 0
 
 {% hint style="info" %}
 WARMUP, PWN, WEB
+
+Kickoff: February 27, 2025
+
+Links: [https://snyk.ctf.games/](https://snyk.ctf.games/)
 {% endhint %}
 
 ## 1. Zero Ex Six One (Warmup - Easy)
