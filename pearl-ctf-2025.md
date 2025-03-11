@@ -448,7 +448,7 @@ void generate_password(void *param_1,ulong param_2)
 {% endtabs %}
 
 * Pretty long huh?, but the code is straightforward:
-  * First, the code will generate a new password to protect the `files/flag.txt` file that we inputed. The password os randomly generated from `/dev/urandom` file and will be store in `local_98` array with only **112 Bytes**.
+  * First, the code will generate a new password to protect the `files/flag.txt` file that we inputed. The password is randomly generated from `/dev/urandom` file and will be store in `local_98` array with only **112 Bytes**.
   * We've to input the correct path of a target file that we want to read. There are only 3 files that we can read from the remote machine, including `flag.txt`, `default.txt`, and the `note-1.txt` (I aware you not to read this file :v).
   * If we type: `files/flag.txt` , it means that we've to provide the password!. Otherwise, all files can be read without have to provide a password.
   * **Tips**: Don't get too confused in the password transformation from `/dev/urandom` in the `generate_password`function. _Better leave it_ haha..
@@ -479,7 +479,7 @@ void generate_password(void *param_1,ulong param_2)
 {% endcode %}
 
 * How we can bypass the condition? Since it was using the `strcmp`function, so we can send some `\x00`(**NULL byte**) characters in the input password prompt.
-* But, how long the `\x00`characters that we need? It's only **`112`**(**0x70**) **Bytes** until our input is reach the max of the array length.
+* But, how long the `\x00` characters that we need? It's only **`112`**(**0x70**) **Bytes** until our input is reach the max of the array length.
 * So, here's my exploit script.
 
 {% code title="exploit.py" overflow="wrap" lineNumbers="true" %}
@@ -489,7 +489,7 @@ void generate_password(void *param_1,ulong param_2)
 from pwn import *
 import itertools
 
-context.binary = elf = ELF("./main", checksec=1)
+context.binary = elf = ELF("./main", checksec=0)
 context.log_level = "DEBUG"
 
 is_remote = True
