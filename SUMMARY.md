@@ -16,7 +16,8 @@
 
 ***
 
-* [Slashroot 8.0 - 2024](slashroot-8.0-2024.md)
+* [Slashroot 8.0 2024](slashroot-8.0-2024.md)
+* [Hacktrace Ranges 2024](hacktrace-ranges-2024.md)
 * [TCP1P CTF 2024](tcp1p-ctf-2024.md)
 * [Wreck-IT 5.0 - 2024](wreck-it-5.0-2024.md)
 

@@ -1,14 +1,14 @@
 ---
 description: >-
-  Slashroot is a CTF event that was hosted by the ITB Stikom Bali. For the
-  quals, the format of CTF is jeopardy-style and held online.
+  Slashroot is a CTF event hosted by the ITB Stikom Bali. For the quals, the
+  format of CTF is jeopardy-style and held online.
 icon: slash-forward
 cover: >-
   https://images.unsplash.com/photo-1613677135043-a2512fbf49fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxoYWNrfGVufDB8fHx8MTc0MDg3NTc3MXww&ixlib=rb-4.0.3&q=85
 coverY: 0
 ---
 
-# Slashroot 8.0 - 2024
+# Slashroot 8.0 2024
 
 ## 1. Login Begin (Web - Easy)
 

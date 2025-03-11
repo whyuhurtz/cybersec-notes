@@ -1,8 +1,7 @@
 ---
 description: >-
-  Wreck-IT is a CTF event that was hosted by the National Cyber and Crypto
-  Polytechnic (PSSN). For the quals, the format of CTF is jeopardy-style and
-  held online.
+  Wreck-IT is a CTF event hosted by the National Cyber and Crypto Polytechnic
+  (PSSN). For the quals, the format of CTF is jeopardy-style and held online.
 icon: binary-lock
 ---
 
