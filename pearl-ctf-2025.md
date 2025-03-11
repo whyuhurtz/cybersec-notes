@@ -249,8 +249,8 @@ void winTreasure(void)
 ```
 {% endcode %}
 
-* From all the function symbols above, we can see the pattern that in the `main`function is only calling function from `unchanted_forest.c` (**level 1**) until `chamber_of_eternity.c` (level 5).
-* What is every level/function does ? It just compared the key in each level. It it's correct, you can go to the next level until you reach out last level, which is level 5.
+* From all the function symbols above, we can see the pattern in the `main`function that is calling some functions from `unchanted_forest` (**level 1**) until `chamber_of_eternity` (level 5).
+* What is every level/function does ? It just compared the key in each level. If it's correct, you can go to the next level until you reach out last level, which is level 5.
 * After we successfully reach out to the last level, you see in the `chamber_of_eternity.c` is happen BOF vulnerability in `fgets` function. The buffer is only take 64 Bytes, but we can input until **500 Bytes**.
 * So, the objective is very straighforward. After we at the last level, we can do ret2win attack to `winTreasure`function to get the flag.
 * But, another problem is we can't directly get the flag until the `eligible` global variable is changed to **1**. How we can change it? Simple, we can jump to the `setEligibility` function first, and then jump to the `winTreasure` function.
@@ -447,7 +447,7 @@ void generate_password(void *param_1,ulong param_2)
   * **Tips**: Don't get too confused in the password transformation from `/dev/urandom` in the `generate_password`function. _Better leave it_ haha..
 * Notice that in the `main`function is comparing a string of `local_98` (**generated password**) with a `local_108` (**user input password**).
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code title="main.c" overflow="wrap" lineNumbers="true" %}
 ```csharp
   // snipped code.
     if (__stream == (FILE *)0x0) {
