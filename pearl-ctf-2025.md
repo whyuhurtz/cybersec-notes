@@ -45,10 +45,12 @@ Links: [https://pearlctf.in/challenges](https://pearlctf.in/challenges)
 
 <figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-* Here's a decompiled code for every functions.
+* Here's a decompiled code for every functions in `vuln.c`.
 
-{% code title="main.c" overflow="wrap" lineNumbers="true" %}
+{% tabs %}
+{% tab title="main" %}
 ```csharp
+// main function.
 undefined8 main(void)
 
 {
@@ -62,9 +64,9 @@ undefined8 main(void)
   return 0;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-{% code title="check_key.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="check_key" %}
 ```csharp
 undefined8 check_key(int param_1,char *param_2)
 
@@ -83,9 +85,9 @@ undefined8 check_key(int param_1,char *param_2)
   return CONCAT71((int7)(CONCAT44(extraout_var,iVar1) >> 8),iVar1 == 0);
 }
 ```
-{% endcode %}
+{% endtab %}
 
-{% code title="enchanted_forest.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="enchanted_forest" %}
 ```csharp
 void enchanted_forest(void)
 
@@ -109,10 +111,11 @@ void enchanted_forest(void)
   puts("Correct! You have passed The Enchanted Forest.");
   return;
 }
+void desert_of_sands(void)
 ```
-{% endcode %}
+{% endtab %}
 
-{% code title="desert_of_sands.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="desert_of_sands" %}
 ```csharp
 void desert_of_sands(void)
 
@@ -137,9 +140,9 @@ void desert_of_sands(void)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-{% code title="ruins_of_eldoria.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="ruins_of_eldoria" %}
 ```csharp
 void ruins_of_eldoria(void)
 
@@ -164,9 +167,9 @@ void ruins_of_eldoria(void)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-{% code title="caverns_of_eternal_darkness.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="caverns_of_eternal_darkness" %}
 ```csharp
 void caverns_of_eternal_darkness(void)
 
@@ -191,9 +194,9 @@ void caverns_of_eternal_darkness(void)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-{% code title="chamber_of_eternity.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="chamber_of_eternity" %}
 ```csharp
 void chamber_of_eternity(void)
 {
@@ -211,11 +214,9 @@ void chamber_of_eternity(void)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-* And the last one is `setElibility`function.
-
-{% code title="setEligibility.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="setEligibility" %}
 ```csharp
 void setEligibility(void)
 
@@ -224,12 +225,11 @@ void setEligibility(void)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-* And here's the `winTreasure`function to get the flag.
-
-{% code title="winTreasure.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="winTreasure" %}
 ```csharp
+// win function.
 void winTreasure(void)
 
 {
@@ -247,7 +247,8 @@ void winTreasure(void)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 * From all the function symbols above, we can see the pattern in the `main`function that is calling some functions from `unchanted_forest` (**level 1**) until `chamber_of_eternity` (level 5).
 * What is every level/function does ? It just compared the key in each level. If it's correct, you can go to the next level until you reach out last level, which is level 5.
@@ -341,10 +342,14 @@ pearl{k33p\_0n\_r3turning\_l0l}
 <figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 * We only got 2 interesting function symbols, which is the `main` function and `generate_password` function.
-* Here's the decompiled of those 2 functions.
+* Here's the decompiled of `main` and `generate_password` functions.
 
-<pre class="language-csharp" data-title="main.c" data-overflow="wrap" data-line-numbers><code class="lang-csharp"><strong>undefined8 main(void)
-</strong>
+{% tabs %}
+{% tab title="main" %}
+```csharp
+// main function.
+undefined8 main(void)
+
 {
   int iVar1;
   char *pcVar2;
@@ -362,7 +367,7 @@ pearl{k33p\_0n\_r3turning\_l0l}
   fflush(stdout);
   local_18c = 0;
   do {
-    if (1 &#x3C; local_18c) {
+    if (1 < local_18c) {
       if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
                     /* WARNING: Subroutine does not return */
         __stack_chk_fail();
@@ -371,7 +376,7 @@ pearl{k33p\_0n\_r3turning\_l0l}
     }
     printf("\nEnter the file name: ");
     fflush(stdout);
-    __isoc99_scanf(&#x26;DAT_00102088,local_178);
+    __isoc99_scanf(&DAT_00102088,local_178);
     pcVar2 = __xpg_basename(local_178);
     __stream = fopen(local_178,"r");
     if (__stream == (FILE *)0x0) {
@@ -383,7 +388,7 @@ pearl{k33p\_0n\_r3turning\_l0l}
       if (iVar1 == 0) {
         printf("Enter password: ");
         fflush(stdout);
-        __isoc99_scanf(&#x26;DAT_00102088,local_108);
+        __isoc99_scanf(&DAT_00102088,local_108);
         iVar1 = strcmp(local_108,local_98);
         if (iVar1 != 0) {
           puts("Incorrect password!");
@@ -403,9 +408,10 @@ LAB_001015f2:
     local_18c = local_18c + 1;
   } while( true );
 }
-</code></pre>
+```
+{% endtab %}
 
-{% code title="generate_password.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="generate_password" %}
 ```csharp
 void generate_password(void *param_1,ulong param_2)
 
@@ -438,7 +444,8 @@ void generate_password(void *param_1,ulong param_2)
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 * Pretty long huh?, but the code is straightforward:
   * First, the code will generate a new password to protect the `files/flag.txt` file that we inputed. The password os randomly generated from `/dev/urandom` file and will be store in `local_98` array with only **112 Bytes**.
