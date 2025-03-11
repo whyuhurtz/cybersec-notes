@@ -14,16 +14,32 @@ I am a college student at Jakarta State Polytechnic (PNJ), which has a high pass
 
 ## 👋🏻 Welcome
 
-Welcome to my blog!. My blog mostly consists of CTF write-ups, whether they're national (Indonesia) or international events. You are welcome to read, and good luck if you find something interesting.
+Welcome to my blog!. My blog mostly consists of CTF write-ups, whether they're national (Indonesia) or international events. You are welcome to read, and good luck if you find something interesting. 🚩
 
-Actually, my goal is to be a **system administrator** or **DevOps** in the future, but I enjoy playing CTF in my free time. During the CTF events, I mostly handle **pwn** (binary exploitation) and **web exploitation** challenges. For Rev, I don't like it too much because there are cipher and cryptographic things and I'm not good at math. I used AI a lot to help me solving CTF challenges, thank you ChatGPT and DeepSeek :joy:.&#x20;
+Actually, my goal is to be a **system administrator** or **DevOps engineer** in the future, but I enjoy playing CTF in my free time. During the CTF events, I mostly handle **pwn** (binary exploitation) and **web exploitation** challenges. For Rev, I don't like it too much because there are cipher and cryptographic things and I'm not good at math. I used AI a lot to help me solving CTF challenges, thank you ChatGPT and DeepSeek. :joy:&#x20;
 
-Yeah, that's all from me; enjoy and keep learning.
+Yeah, that's all from me; enjoy and keep learning.🔥
 
 ## 🔗 Links
 
+{% tabs %}
+{% tab title="Instagram" %}
 {% embed url="https://instagram.com/whyuhurtz" %}
+{% endtab %}
 
+{% tab title="GitHub" %}
 {% embed url="https://github.com/whyuhurtz" %}
+{% endtab %}
 
+{% tab title="Credly" %}
+[https://www.credly.com/users/wahyu-priambodo](https://www.credly.com/users/wahyu-priambodo)
+{% endtab %}
+
+{% tab title="LinkedIn" %}
 {% embed url="https://www.linkedin.com/in/wahyu-priambodo/" %}
+{% endtab %}
+
+{% tab title="Gmail" %}
+[mailto:wahyupriambodo.sec@gmail.com](mailto:wahyupriambodo.sec@gmail.com)
+{% endtab %}
+{% endtabs %}
