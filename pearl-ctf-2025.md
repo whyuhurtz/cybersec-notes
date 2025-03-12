@@ -308,7 +308,7 @@ io.interactive()
 
 ### 1.3. Flag
 
-pearl{k33p\_0n\_r3turning\_l0l}
+<kbd>pearl{k33p\_0n\_r3turning\_l0l}</kbd>
 
 ## 2. Readme Please
 
@@ -516,7 +516,7 @@ io.close()
 
 ### 2.3. Flag
 
-pearl{f1l3\_d3script0rs\_4r3\_c00l}
+<kbd>pearl{f1l3\_d3script0rs\_4r3\_c00l}</kbd>
 
 ***
 
