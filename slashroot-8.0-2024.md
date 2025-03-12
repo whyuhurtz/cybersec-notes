@@ -32,7 +32,7 @@ coverY: 0
 
 ### 1.3. Flag
 
-slashroot8{W0w\_Y0u\_G00d\_B3gg1nn3r}
+<kbd>slashroot8{W0w\_Y0u\_G00d\_B3gg1nn3r}</kbd>
 
 ## 2. Go-Ping (Web - Easy)
 
@@ -67,7 +67,7 @@ slashroot8{W0w\_Y0u\_G00d\_B3gg1nn3r}
 
 ### 2.3. Flag
 
-slashroot8{Rc3\_W1Th\_c0mM4Nd\_1Nj3cT1On\_1S\_V3Ry\_v3rY\_N1Ce}
+<kbd>slashroot8{Rc3\_W1Th\_c0mM4Nd\_1Nj3cT1On\_1S\_V3Ry\_v3rY\_N1Ce}</kbd>
 
 ## 3. EZZ Momento (Web - Medium)
 
@@ -162,7 +162,7 @@ public class Exploit {
 
 ### 3.3. Flag
 
-slashroot8{it\_is\_really\_private\_UwU}
+<kbd>slashroot8{it\_is\_really\_private\_UwU}</kbd>
 
 ## 4. Package Delivery (Joy - Easy)
 
@@ -186,7 +186,7 @@ slashroot8{it\_is\_really\_private\_UwU}
 
 ### 4.3. Flag
 
-slashroot8{N0T90Nn4l1e\_tH4T\_w45\_E45y\_hUh?}
+<kbd>slashroot8{N0T90Nn4l1e\_tH4T\_w45\_E45y\_hUh?}</kbd>
 
 ## 5. baby-lua (RE - Easy)
 
@@ -307,7 +307,7 @@ print("Flag:", flag)
 
 ### 5.3. Flag
 
-slashroot8{ez\_0n3\_f0r\_y0u\_see\_y0u\_1n\_f1n4l}
+<kbd>slashroot8{ez\_0n3\_f0r\_y0u\_see\_y0u\_1n\_f1n4l}</kbd>
 
 ## 6. Find The Key (Foren - Easy)
 
@@ -362,7 +362,7 @@ slashroot8{ez\_0n3\_f0r\_y0u\_see\_y0u\_1n\_f1n4l}
 
 ### 6.3. Flag
 
-slashroot8{Y4n9\_b1k1n\_s04l\_m4s1h\_p3mul4}
+<kbd>slashroot8{Y4n9\_b1k1n\_s04l\_m4s1h\_p3mul4}</kbd>
 
 ***
 

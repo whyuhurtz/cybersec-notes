@@ -1,8 +1,8 @@
 ---
-icon: wolf-pack-battalion
 description: >-
   This event was hosted by Snyk. Only 12 hours CTF challenges with various
   categories.
+icon: wolf-pack-battalion
 cover: >-
   https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxoYWNrfGVufDB8fHx8MTc0MDg3NTc3MXww&ixlib=rb-4.0.3&q=85
 coverY: 0
@@ -61,22 +61,22 @@ for key in range(0x20, 0x7F):
 {% endcode %}
 
 * So, we've to put the sequence of bytes into a list of bytes (_data_).
-* Loop from `0x20` until `0x7E`, which is all printable ASCII characters in human readable text, such as _letters_, _numbers_, and _symbols_. The `0x7F` hex value is commonly use for obfuscate the text (`DEL`). Go to this website to see all list of ASCII tables: "[https://byte-tools.com/en/ascii](https://byte-tools.com/en/ascii)/".
+* Loop from `0x20` until `0x7E`, which is all printable ASCII characters in human readable text, such as _letters_, _numbers_, and _symbols_. The `0x7F` hex value is commonly use for obfuscate the text (`DEL`). Go to this website to see all list of ASCII tables: "[https://byte-tools.com/en/ascii](https://byte-tools.com/en/ascii)[/](https://byte-tools.com/en/ascii)".
 * Like the name of this challenge, the printable characters is start from XOR-ing the bytes of data with `0x61` (a).
-* `0x07`^ `0x61` = **f** ; `0x0d` ^ `0x61` = **l** -> can you see the flag pattern ?
+* `0x07` ^ `0x61` = **f** ; `0x0d` ^ `0x61` = **l** -> can you see the flag pattern ?
 
-<figure><img src="../.gitbook/assets/img00.png" alt=""><figcaption><p>01_flag-pattern</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img00.png" alt=""><figcaption></figcaption></figure>
 
 * The if statement inside the for loop is to filtered only readable **decoded text**, which is excluding weird characters such as `\x00`, `\xFF`, etc.
 * After we run the solver script, the output is like this:
 
-<figure><img src="../.gitbook/assets/img01.png" alt=""><figcaption><p>02_first-flag</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img01.png" alt=""><figcaption></figcaption></figure>
 
 * Notice in key `0x61` we got the flag.
 
 ### 1.3. Flag
 
-flag{c50d82c0a25f3e644d0702b41dbd085a}
+<kbd>flag{c50d82c0a25f3e644d0702b41dbd085a}</kbd>
 
 ## 2. Science 100 (Warmup - Easy)
 
@@ -92,11 +92,11 @@ flag{c50d82c0a25f3e644d0702b41dbd085a}
 * If we got the correct one, then we can continue and choose the option number **2**, which is to print the `flag.txt` file.
 * Here's the flag:
 
-<figure><img src="../.gitbook/assets/img02.png" alt=""><figcaption><p>03_second-flag</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img02.png" alt=""><figcaption></figcaption></figure>
 
 ### 2.3. Flag
 
-flag{89e575e7272b07a1d33e41e3647b3826}
+<kbd>flag{89e575e7272b07a1d33e41e3647b3826}</kbd>
 
 ## 3. Echo (PWN - Easy)
 
@@ -134,14 +134,14 @@ flag{89e575e7272b07a1d33e41e3647b3826}
 * The ELF information is 64-bit and using LE (_little endian_) format.
 * Let's discover list of function symbols inside the ELF binary. I'm using Ghidra in this case.
 
-<figure><img src="../.gitbook/assets/img03.png" alt=""><figcaption><p>04_challenge1-function-symbols</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img03.png" alt=""><figcaption></figcaption></figure>
 
-* Here's the disassembly of `main` function.
+* Here's the decompiled code of `main`  and `win` functions.
 
-{% code title="main.c" overflow="wrap" lineNumbers="true" %}
+{% tabs %}
+{% tab title="main" %}
 ```csharp
 undefined8 main(EVP_PKEY_CTX *param_1)
-
 {
   char local_88 [128]; // 0x80 bytes (HEX).
   
@@ -152,14 +152,11 @@ undefined8 main(EVP_PKEY_CTX *param_1)
   return 0;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-* And here's the disassembly of `win` function.
-
-{% code title="win.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="win" %}
 ```csharp
 void win(void)
-
 {
   int iVar1;
   FILE *__stream;
@@ -179,9 +176,10 @@ LAB_0040126a:
   return;
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-* Simply, we've to hijack control flow with ret2win attack, so we can start executing `win` function after `ret` main.
+* Simply, we've to hijack control flow with **ret2win attack**, so we can start executing `win` function after `ret` main.
 * Here's my exploit script for this challenge.
 
 {% code title="exploit.py" overflow="wrap" lineNumbers="true" %}
@@ -216,11 +214,11 @@ io.interactive()
 * Create a sample `flag.txt` file to run the exploit script locally. If it success, then we can run the exploit script remotely. Just change the `is_remote` variable to `True`.
 * And we got the flag.
 
-<figure><img src="../.gitbook/assets/img04.png" alt=""><figcaption><p>05_third-flag</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img04.png" alt=""><figcaption></figcaption></figure>
 
 ### 3.3. Flag
 
-flag{4f4293237e37d06d733772a087299f17}
+<kbd>flag{4f4293237e37d06d733772a087299f17}</kbd>
 
 ## 4. Additional Information Needed (PWN - Medium)
 
@@ -253,12 +251,14 @@ flag{4f4293237e37d06d733772a087299f17}
 * Hmm, this is a **32-bit ELF binary** and **no protection at all**.
 * Let's discover all function symbols using Ghidra.
 
-<figure><img src="../.gitbook/assets/img05.png" alt=""><figcaption><p>06_challenge2-function-symbols</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img05.png" alt=""><figcaption></figcaption></figure>
 
-* Here's the disassembly of `main` function.
+* Here's the decompiled code of `main`  and `getFlag` function.
 
-{% code title="main.c" overflow="wrap" lineNumbers="true" %}
+{% tabs %}
+{% tab title="main" %}
 ```csharp
+// main
 /* WARNING: Function: __x86.get_pc_thunk.bx replaced with injection: get_pc_thunk_bx */
 
 undefined4 main(void)
@@ -273,11 +273,9 @@ undefined4 main(void)
   return 0;
 }
 ```
-{% endcode %}
+{% endtab %}
 
-* And here's the disassembly of `getFlag` function.
-
-{% code title="getFlag.c" overflow="wrap" lineNumbers="true" %}
+{% tab title="undefined" %}
 ```csharp
 /* WARNING: Function: __x86.get_pc_thunk.bx replaced with injection: get_pc_thunk_bx */
 
@@ -305,7 +303,8 @@ undefined4 getFlag(int param_1,int param_2)
   return uVar1;
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 * In the disassembly of `getFlag` function, we've to pass if condition with multiply the value of `param_1` and `param_2`, so it will be equal to `0x23` (or 35 in decimal). We can do simple math, for example: `param_1` = **7** and `param_2` = **5**, so the output will be **35**.
 * Here's my exploit script for this challenge.
@@ -369,11 +368,11 @@ io.interactive()
 * Create a sample `flag.txt` file in your folder to execute the exploit script locally. If it success, then we can run the exploit script remotely. Just change the `is_remote` variable to `True`.
 * And we got the flag.
 
-<figure><img src="../.gitbook/assets/img06.png" alt=""><figcaption><p>07_fourth-flag</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img06.png" alt=""><figcaption></figcaption></figure>
 
 ### 4.3. Flag
 
-flag{8e9e2e4ec228db4207791e0a534716c3}
+<kbd>flag{8e9e2e4ec228db4207791e0a534716c3}</kbd>
 
 ## 5. TimeOff (Web - Easy)
 
@@ -411,19 +410,19 @@ docker build -t timeoff:latest . && docker run -d --name "timeoff_challenge" -p 
 * When I download the file that I just uploaded, I just think that maybe the vulnerability is happen in `name` of the uploaded file. No sanitize on the input, so I can do like `../` attack to read the arbitrary file inside the target machine (in this case is to read the `flag.txt` file).
 * Move on to the next step. We need to intercept after submit a new timeoff request. I try to upload sample `flag.txt` file.
 
-<figure><img src="../.gitbook/assets/img07.png" alt=""><figcaption><p>08_path-traversal-locally</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img07.png" alt=""><figcaption></figcaption></figure>
 
 * As you can see, the filename of uploaded file is changed to `../../flag.txt`. If we try to download the file, then we got the real flag from container.
 
-<figure><img src="../.gitbook/assets/img08.png" alt=""><figcaption><p>09_get-flag-locally</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img08.png" alt=""><figcaption></figcaption></figure>
 
-* Now, we can perform this Path Traversal attack on the remote target machine.
+* Now, we can perform this **Path Traversal attack** on the remote target machine.
 
-<figure><img src="../.gitbook/assets/img09.png" alt=""><figcaption><p>10_path-traversal-remotely</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img09.png" alt=""><figcaption></figcaption></figure>
 
 * After we submit new timeoff request, we can download the real flag in the browser.
 
-<figure><img src="../.gitbook/assets/img10.png" alt=""><figcaption><p>11_get-flag-remotely</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/img10.png" alt=""><figcaption></figcaption></figure>
 
 * You can also try to scan the source code with `snyk` CLI as the hint says. Here's the output after we scan the given source code.
 
@@ -442,7 +441,7 @@ snyk code test
 
 ### 5.3. Flag
 
-flag{52948d88ee74b9bdab130c35c88bd406}
+<kbd>flag{52948d88ee74b9bdab130c35c88bd406}</kbd>
 
 ***
 

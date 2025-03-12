@@ -40,12 +40,12 @@ Links: [https://pearlctf.in/challenges](https://pearlctf.in/challenges)
     Stripped:   No
 ```
 
-* The binary only have the NX / DEP protection, which is we can't inject a shellcode. Let's decompile the binary using Ghidra.
-* We got some interesting function symbols here.
+* The binary only have the NX / DEP protection, which means that we **can't inject a shellcode**. Let's decompile the binary using Ghidra.
+* We got a bunch of interesting functions here.
 
 <figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-* Here's a decompiled code for every functions in `vuln.c`.
+* Here's a decompiled code of all known functions in `vuln.c`.
 
 {% tabs %}
 {% tab title="main" %}
@@ -250,10 +250,10 @@ void winTreasure(void)
 {% endtab %}
 {% endtabs %}
 
-* From all the function symbols above, we can see the pattern in the `main`function that is calling some functions from `unchanted_forest` (**level 1**) until `chamber_of_eternity` (level 5).
+* From all the function symbols above, we can see the pattern in the `main`function that is calling some functions from `unchanted_forest` (**level 1**) until `chamber_of_eternity` (**level 5**).
 * What is every level/function does ? It just compared the key in each level. If it's correct, you can go to the next level until you reach out last level, which is level 5.
-* After we successfully reach out to the last level, you see in the `chamber_of_eternity.c` is happen BOF vulnerability in `fgets` function. The buffer is only take 64 Bytes, but we can input until **500 Bytes**.
-* So, the objective is very straighforward. After we at the last level, we can do ret2win attack to `winTreasure`function to get the flag.
+* After we successfully reach out to the last level, you see in the  `chamber_of_eternity` function is happen **BOF vulnerability** in `fgets` function. The buffer is only take **64 Bytes**, but we can input until **500 Bytes**.
+* So, the objective is very straighforward. After we at the last level, we can do **ret2win attack** to `winTreasure`function to get the flag.
 * But, another problem is we can't directly get the flag until the `eligible` global variable is changed to **1**. How we can change it? Simple, we can jump to the `setEligibility` function first, and then jump to the `winTreasure` function.
 * Here's my final exploit script.
 
@@ -322,7 +322,7 @@ pearl{k33p\_0n\_r3turning\_l0l}
 
 ### 2.2. Solve Walkthrough
 
-* This is also a simple pwn challenge, but no special technique. Only depends on your logic and knowledge in binary.
+* This is also a simple pwn challenge, without special technique. Only depends on your logic and knowledge in binary.
 * First, after we unzip the source code, let's check the ELF binary protection.
 
 ```bash
@@ -337,7 +337,7 @@ pearl{k33p\_0n\_r3turning\_l0l}
     Stripped:   No
 ```
 
-* This is list of available function symbols inside the binary.
+* This is a list of available functions inside the binary.
 
 <figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
@@ -451,10 +451,10 @@ void generate_password(void *param_1,ulong param_2)
   * First, the code will generate a new password to protect the `files/flag.txt` file that we inputed. The password is randomly generated from `/dev/urandom` file and will be store in `local_98` array with only **112 Bytes**.
   * We've to input the correct path of a target file that we want to read. There are only 3 files that we can read from the remote machine, including `flag.txt`, `default.txt`, and the `note-1.txt` (I aware you not to read this file :v).
   * If we type: `files/flag.txt` , it means that we've to provide the password!. Otherwise, all files can be read without have to provide a password.
-  * **Tips**: Don't get too confused in the password transformation from `/dev/urandom` in the `generate_password`function. _Better leave it_ haha..
-* Notice that in the `main`function is comparing a string of `local_98` (**generated password**) with a `local_108` (**user input password**).
+  * **Tips**: Don't get too confused in the password transformation from `/dev/urandom` in the `generate_password` function. _Better leave it_ haha..
+* Notice that in the `main` function is comparing a string of `local_98` (**generated password**) with a `local_108` (**user input password**).
 
-{% code title="main.c" overflow="wrap" lineNumbers="true" %}
+{% code title="main" overflow="wrap" lineNumbers="true" %}
 ```csharp
   // snipped code.
     if (__stream == (FILE *)0x0) {
@@ -478,8 +478,8 @@ void generate_password(void *param_1,ulong param_2)
 ```
 {% endcode %}
 
-* How we can bypass the condition? Since it was using the `strcmp`function, so we can send some `\x00`(**NULL byte**) characters in the input password prompt.
-* But, how long the `\x00` characters that we need? It's only **`112`**(**0x70**) **Bytes** until our input is reach the max of the array length.
+* How we can bypass the condition? Since it was using the `strcmp`function, so we can send some `\x00`(**NULL Byte**) characters in the input password prompt.
+* But, how long the `\x00` characters that we need? It's only **`112` Bytes** (**0x70**) until our input is reach the max of array length.
 * So, here's my exploit script.
 
 {% code title="exploit.py" overflow="wrap" lineNumbers="true" %}
