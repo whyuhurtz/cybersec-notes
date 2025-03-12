@@ -28,3 +28,4 @@
 ***
 
 * [Pearl CTF 2025](pearl-ctf-2025.md)
+* [LITCTF Quals 2024](litctf-quals-2024.md)

@@ -24,11 +24,11 @@ coverY: 0
 * Di halaman register `/register.php` ada select **role**, tanpa pikir panjang, saya langsung intercept menggunakan burp suite ketika coba register.
 * Waktu register, saya ganti rolenya menjadi **admin**.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 * Alhamdulillah, flag berhasil didapatkan.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 1.3. Flag
 
@@ -57,13 +57,13 @@ coverY: 0
 <pre class="language-bash!"><code class="lang-bash!"><strong>find${IFS}/${IFS}-name${IFS}'flag*'${IFS}-type${IFS}f
 </strong></code></pre>
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Nama file flagnya adalah `/flag_Zr8ovfVgFXqQdlbI.txt`.
 * Dari sini, bisa kita ambil kesimpulan jika terdapat filter pada inputannya, yaitu **spasi akan dihilangkan (bisa kita akali dengan `${IFS}`)** dan **terdapat beberapa command yang prohibited untuk dieksekusi, seperti `ls`, `cat`, dan `more`**.
 * Dan berikut adalah payload untuk bisa membaca flagnya, bisa menggunakan `tac`, `nl`, dan `less`, dll.
 
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2.3. Flag
 
@@ -158,7 +158,7 @@ public class Exploit {
 
 * Alhamdulillah, berhasil solve semua soal web exploit :))
 
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3.3. Flag
 
@@ -182,7 +182,7 @@ public class Exploit {
 * Ngapain harus se-effort itu kan, lalu saya coba quick analysis file `.pck` untuk nemuin something interest.
 * Alhamdulillah, ketika saya coba cari **"slashroot"** langsung ketemu flagnya. Agak curiga sih di awal kenapa semudah itu, tapi gas ajalah wkwk.
 
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 4.3. Flag
 
@@ -321,11 +321,11 @@ print("Flag:", flag)
 
 * Saya coba liat file signature dari file tersebut, sepertinya terpotong. Bisa dilihat pada gambar di bawah, 3 digit hex yang di-highlight sepertinya indikasi file JPG.
 
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Setelah saya coba fix dengan file signature yang sesuai, tidak ada flag yang muncul.
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Analisis selanjutnya yaitu mengecek bagian human readable dari file tersebut dengan `strings`.
 
