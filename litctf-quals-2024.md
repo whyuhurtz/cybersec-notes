@@ -2,9 +2,16 @@
 description: >-
   Beginner level online CTF that's open to everyone. Hosted and managed by the
   LexMACS club from Lexington High School.
+cover: >-
+  https://images.unsplash.com/photo-1564836663277-c4aa761b9882?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxjeWJlcnxlbnwwfHx8fDE3NDE4MjA4MjF8MA&ixlib=rb-4.0.3&q=85
+coverY: 0
 ---
 
 # LITCTF Quals 2024
+
+{% hint style="info" %}
+MISC, WEB
+{% endhint %}
 
 ## welcome (Misc - Very Easy)
 
