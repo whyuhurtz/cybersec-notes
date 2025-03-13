@@ -1,5 +1,6 @@
 ---
 description: Gemastik CTF 2024 (UNNES) warmup writeup.
+icon: fire
 cover: >-
   https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxuZXR3b3JrfGVufDB8fHx8MTc0MDg3NTc3Mnww&ixlib=rb-4.0.3&q=85
 coverY: 0

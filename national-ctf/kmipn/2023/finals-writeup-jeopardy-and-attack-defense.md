@@ -2,6 +2,7 @@
 description: >-
   KMIPN V (2023) was organized by Electronic Engineering Polytechnic Institute
   of Surabaya (PENS).
+icon: radar
 cover: >-
   https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw3fHxjeWJlcnxlbnwwfHx8fDE3NDA4OTg2OTh8MA&ixlib=rb-4.0.3&q=85
 coverY: 0

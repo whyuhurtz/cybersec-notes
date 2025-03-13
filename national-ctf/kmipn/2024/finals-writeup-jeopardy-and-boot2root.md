@@ -1,5 +1,6 @@
 ---
 description: KMIPN VI (2024) was organized by Jakarta State Polytechnic (PNJ).
+icon: radar
 cover: >-
   https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw3fHxjeWJlcnxlbnwwfHx8fDE3NDA4OTg2OTh8MA&ixlib=rb-4.0.3&q=85
 coverY: 0

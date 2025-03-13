@@ -28,7 +28,7 @@ MISC, WEB
 
 * Flag 2 at the bottom of [contest rules](https://lit.lhsmathcs.org/logistics) page: `24_is_h4pp3n1ng_and_h0p3_u_r_2}`.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **GOTCHAA!!**
 

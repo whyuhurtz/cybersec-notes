@@ -18,14 +18,14 @@ Links: [https://ctf.os.ftp.sh/](https://ctf.os.ftp.sh/)
 
 ### 1. Description
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Solve Walkthrough
 
 * Just answer all the questions after making a connection.
 * ChatGPT helped a lot. :joy:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Flag
 
@@ -171,4 +171,4 @@ The repaired statue image:
 
 ***
 
-**Tags**: #ctf, #misc, #osint, #web
+**Tags**: #ctf, #misc, #osint, #web-exploitation
