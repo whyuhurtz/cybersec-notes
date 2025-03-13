@@ -24,11 +24,11 @@ coverY: 0
 * Di halaman register `/register.php` ada select **role**, tanpa pikir panjang, saya langsung intercept menggunakan burp suite ketika coba register.
 * Waktu register, saya ganti rolenya menjadi **admin**.
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Alhamdulillah, flag berhasil didapatkan.
 
-<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 1.3. Flag
 
@@ -57,13 +57,13 @@ coverY: 0
 <pre class="language-bash!"><code class="lang-bash!"><strong>find${IFS}/${IFS}-name${IFS}'flag*'${IFS}-type${IFS}f
 </strong></code></pre>
 
-<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Nama file flagnya adalah `/flag_Zr8ovfVgFXqQdlbI.txt`.
 * Dari sini, bisa kita ambil kesimpulan jika terdapat filter pada inputannya, yaitu **spasi akan dihilangkan (bisa kita akali dengan `${IFS}`)** dan **terdapat beberapa command yang prohibited untuk dieksekusi, seperti `ls`, `cat`, dan `more`**.
 * Dan berikut adalah payload untuk bisa membaca flagnya, bisa menggunakan `tac`, `nl`, dan `less`, dll.
 
-<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2.3. Flag
 
@@ -158,7 +158,7 @@ public class Exploit {
 
 * Alhamdulillah, berhasil solve semua soal web exploit :))
 
-<figure><img src=".gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3.3. Flag
 
@@ -182,7 +182,7 @@ public class Exploit {
 * Ngapain harus se-effort itu kan, lalu saya coba quick analysis file `.pck` untuk nemuin something interest.
 * Alhamdulillah, ketika saya coba cari **"slashroot"** langsung ketemu flagnya. Agak curiga sih di awal kenapa semudah itu, tapi gas ajalah wkwk.
 
-<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 4.3. Flag
 
@@ -321,42 +321,42 @@ print("Flag:", flag)
 
 * Saya coba liat file signature dari file tersebut, sepertinya terpotong. Bisa dilihat pada gambar di bawah, 3 digit hex yang di-highlight sepertinya indikasi file JPG.
 
-<figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Setelah saya coba fix dengan file signature yang sesuai, tidak ada flag yang muncul.
 
-<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Analisis selanjutnya yaitu mengecek bagian human readable dari file tersebut dengan `strings`.
 
-<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Nampak sebuah flag tapi formatnya salah, terbukti ketika dicoba submit, baik dengan kelebihan **r** atau pun tidak hasilnya tetap incorrect.
 * Saya coba decode nilai hex di bawahnya, flagnya masih incorrect.
 
-<figure><img src=".gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Kemudian, saya coba kode binary yang di bawahnya, berikut hasil konversi ke ascii (text).
 
-<figure><img src=".gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Hmm, sebuah flag juga, tapi ketika coba submit masih incorrect.
 * Saya coba decode nilai hex yang di atas flag awal, hasilnya adalah `admin123`.
 
-<figure><img src=".gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Sejenak saya berpikir mungkin saja itu sebuah password, but for what ?? Apakah ini sebuah file archive yang diproteksi password ?
 * Saya coba cari nilai hex yang relevan dengan file signature zip yaitu `50 4B 03 04`, ternyata ada dong dan itu **berulang sebanyak 4 kali**.
 
-<figure><img src=".gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Ketika file signaturenya diganti dari jpg ke zip beneran bisa dong.
 
-<figure><img src=".gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Saya coba baca isi file tersebut, rata-rata semuanya di-encode menggunakan base64 dan ternyata di dalamnya ada banyak sekali flag palsu. Sampai pada akhirnya, alhamdulillah saya berhasil ketemu flag aslinya sebelum nilai binary.
 
-<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Bang jangan di prank mulu donk, udah salah berape kali gw :v.
 

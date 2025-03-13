@@ -24,6 +24,7 @@
 ## International-CTF
 
 * [LITCTF Quals 2024](international-ctf/litctf-quals-2024.md)
+* [OS CTF 2024](international-ctf/os-ctf-2024.md)
 * [Snyk FetchTheFlag 2025](international-ctf/snyk-fetchtheflag-2025.md)
 
 ***

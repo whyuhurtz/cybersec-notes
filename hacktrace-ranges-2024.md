@@ -55,7 +55,7 @@ nmap -p 3389 -sVC -v -oN output_scan_port_3389.txt 10.1.2.233
 
 * Tidak ada yang interesting untuk saat ini. Mungkin untuk **Domain Name** nanti berguna.
 
-<figure><img src=".gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 2.3. RPC Enumeration
 
@@ -97,13 +97,13 @@ netname: IPC$
 nmap -p 8111 -sVC -v -oN output_scan_port_8111.txt 10.1.2.233
 ```
 
-<figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Setelah saya coba open port **8111** di web browser, terdapat info menarik yaitu tampil halaman login **JetBrains TeamCity versi 2023.11.3**.
 * Tanpa pikir panjang, saya langsung mencari tau apakah versi tersebut ada CVE-nya atau tidak.
 * Dari hasil pencarian, ditemukan bahwa **JetBrains TeamCity versi 2023.11.3** terdapat kerentanan _**Authentication Bypass to RCE**_, yang mana mengizinkan attacker bisa login tanpa menggunakan akun yang sah/terdaftar di sistem (lebih lengkapnya baca artikel ini: [https://www.vicarius.io/vsociety/posts/teamcity-auth-bypass-to-rce-cve-2024-27198-and-cve-2024-27199](https://www.vicarius.io/vsociety/posts/teamcity-auth-bypass-to-rce-cve-2024-27198-and-cve-2024-27199)).
 
-<figure><img src=".gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Kemudian saya cari script POC yang mungkin orang lain pernah buat, dan ternyata saya menemukannya dari repo GitHub berikut: [https://github.com/W01fh4cker/CVE-2024-27198-RCE](https://github.com/W01fh4cker/CVE-2024-27198-RCE).
 * Saya coba jalankan script tersebut menggunakan command:
@@ -113,13 +113,13 @@ pip3 install requests urllib3 faker
 python3 CVE-2024-27198-RCE.py -t http://10.1.2.233:8111
 ```
 
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (23) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Dan **Alhamdulillah**! saya berhasil mendapatkan powershellnya, lanjut ke pencarian kredensial untuk bisa melakukan RDP.
 * Saya coba `ls` current directory dan menemukan sebuah file: `cred.txt` yang berisi username dan password.
 * Tanpa pikir panjang saya langsung coba login RDP menggunakan tool bawaan Windows langsung.
 
-<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (24) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Terdapat sebuah file `user.txt` di **Desktop**, dan setelah saya buka ternyata berisikan sebuah flag user. **GOTCHAA!!**.
 * Berikut POC setelah berhasil remote desktop ke mesin target Windows 10:

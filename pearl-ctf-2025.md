@@ -1,7 +1,7 @@
 ---
 icon: earlybirds
 cover: >-
-  https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxoYWNrfGVufDB8fHx8MTc0MTM4ODQ0OHww&ixlib=rb-4.0.3&q=85
+  https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxjeWJlcnxlbnwwfHx8fDE3NDE4MjA4MjF8MA&ixlib=rb-4.0.3&q=85
 coverY: 0
 ---
 
@@ -43,7 +43,7 @@ Links: [https://pearlctf.in/challenges](https://pearlctf.in/challenges)
 * The binary only have the NX / DEP protection, which means that we **can't inject a shellcode**. Let's decompile the binary using Ghidra.
 * We got a bunch of interesting functions here.
 
-<figure><img src=".gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Here's a decompiled code of all known functions in `vuln.c`.
 
@@ -304,7 +304,7 @@ io.interactive()
 
 * If we run the exploit script remotely, we can get a shell.
 
-<figure><img src=".gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 1.3. Flag
 
@@ -339,7 +339,7 @@ io.interactive()
 
 * This is a list of available functions inside the binary.
 
-<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 * We only got 2 interesting function symbols, which is the `main` function and `generate_password` function.
 * Here's the decompiled of `main` and `generate_password` functions.
@@ -512,7 +512,7 @@ io.close()
 ```
 {% endcode %}
 
-<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2.3. Flag
 
