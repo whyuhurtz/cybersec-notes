@@ -1,6 +1,6 @@
 # Table of contents
 
-* [📖 Cybersec Notes](README.md)
+* [📖 Readme](README.md)
 
 ## national-ctf
 

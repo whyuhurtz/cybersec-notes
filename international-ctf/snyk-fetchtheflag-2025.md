@@ -275,7 +275,7 @@ undefined4 main(void)
 ```
 {% endtab %}
 
-{% tab title="undefined" %}
+{% tab title="getFlag" %}
 ```csharp
 /* WARNING: Function: __x86.get_pc_thunk.bx replaced with injection: get_pc_thunk_bx */
 

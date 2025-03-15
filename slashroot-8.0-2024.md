@@ -46,9 +46,7 @@ coverY: 0
 
 ### 2.2. Solve Walkthrough
 
-*
-
-    Diberikan challenge black box testing lagi, setelah quick analysis, jelas itu vuln **Command Injection**.
+* Diberikan challenge black box testing lagi, setelah quick analysis, jelas itu vuln **Command Injection**.
 * Tapi setelah saya coba masukan payload: `127.0.0.1;ls` tidak muncul list file apa-apa.
 * Tidak berhenti di situ, saya coba tambahkan opsi `-lah` ternyata terpotong **`-lah` not found**. Saya juga udah coba ganti spasi dengan `${IFS}` tetap not found.
 * Saya coba `ls /`, tapi muncul **permission denied**.
