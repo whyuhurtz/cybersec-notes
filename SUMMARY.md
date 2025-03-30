@@ -24,7 +24,11 @@
 
 ## International-CTF
 
-* [LITCTF Quals 2024](international-ctf/litctf-quals-2024.md)
+* [LITCTF Quals 2024](international-ctf/litctf-quals-2024/README.md)
+  * [welcome](international-ctf/litctf-quals-2024/welcome.md)
+  * [anti-inspect](international-ctf/litctf-quals-2024/anti-inspect.md)
+  * [jwt-1](international-ctf/litctf-quals-2024/jwt-1.md)
+  * [jwt-2](international-ctf/litctf-quals-2024/jwt-2.md)
 * [OS CTF 2024](international-ctf/os-ctf-2024/README.md)
   * [Cyber Quiz](international-ctf/os-ctf-2024/cyber-quiz.md)
   * [The status is being repaired](international-ctf/os-ctf-2024/the-status-is-being-repaired.md)
