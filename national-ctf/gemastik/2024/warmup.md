@@ -52,4 +52,4 @@ All warmup challenges can be see at the following url:
 
 ***
 
-**Tags**: #ctf, #web-exploitation, #warmup
+**Tags**: #ctf, #web, #warmup

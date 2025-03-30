@@ -28,4 +28,4 @@ Other KMIPN V CTF writeups can be seen at the following url:
 
 ***
 
-**Tags**: #ctf, #web-exploitation, #attack-defense
+**Tags**: #ctf, #web, #attack-defense

@@ -17,7 +17,13 @@
 
 ***
 
-* [Slashroot 8.0 2024](slashroot-8.0-2024.md)
+* [Slashroot 8.0 2024](slashroot-8.0-2024/README.md)
+  * [Login Begin](slashroot-8.0-2024/login-begin.md)
+  * [Go-Ping](slashroot-8.0-2024/go-ping.md)
+  * [EZZ Momento](slashroot-8.0-2024/ezz-momento.md)
+  * [Package Delivery](slashroot-8.0-2024/package-delivery.md)
+  * [baby-lua](slashroot-8.0-2024/baby-lua.md)
+  * [Find The Key](slashroot-8.0-2024/find-the-key.md)
 * [Hacktrace Ranges 2024](hacktrace-ranges-2024/README.md)
   * [Rocket](hacktrace-ranges-2024/rocket.md)
   * [Poison Master](hacktrace-ranges-2024/poison-master.md)

@@ -16,4 +16,4 @@ coverY: 0
 
 ***
 
-**Tags**: #ctf, #web-exploitation, #cryptography
+**Tags**: #ctf, #web, #cryptography

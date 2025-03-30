@@ -26,4 +26,4 @@ Other KMIPN VI CTF writeups can be seen at the following url:
 
 ***
 
-**Tags**: #ctf, #web-exploitation, #boot2root
+**Tags**: #ctf, #web, #boot2root
