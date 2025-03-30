@@ -18,8 +18,14 @@
 ***
 
 * [Slashroot 8.0 2024](slashroot-8.0-2024.md)
-* [Hacktrace Ranges 2024](hacktrace-ranges-2024.md)
-* [Wreck-IT 5.0 Quals 2024](wreck-it-5.0-quals-2024.md)
+* [Hacktrace Ranges 2024](hacktrace-ranges-2024/README.md)
+  * [Rocket](hacktrace-ranges-2024/rocket.md)
+  * [Poison Master](hacktrace-ranges-2024/poison-master.md)
+  * [Moonstone](hacktrace-ranges-2024/moonstone.md)
+* [Wreck-IT 5.0 Quals 2024](wreck-it-5.0-quals-2024/README.md)
+  * [Free Flag](wreck-it-5.0-quals-2024/free-flag.md)
+  * [Oshiku](wreck-it-5.0-quals-2024/oshiku.md)
+  * [m4k c0MbL4n6](wreck-it-5.0-quals-2024/m4k-c0mbl4n6.md)
 * [TCP1P CTF 2024](tcp1p-ctf-2024.md)
 
 ## International-CTF

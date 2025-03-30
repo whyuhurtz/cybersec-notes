@@ -239,11 +239,11 @@ void winTreasure(void)
 {% endtab %}
 {% endtabs %}
 
-* From all the function symbols above, we can see the pattern in the `main`function that is calling some functions from `unchanted_forest` (**level 1**) until `chamber_of_eternity` (**level 5**).
+* From all the function symbols above, we can see the pattern in the `main` function that is calling some functions from `unchanted_forest` (**level 1**) until `chamber_of_eternity` (**level 5**).
 * What is every level/function does ? It just compared the key in each level. If it's correct, you can go to the next level until you reach out last level, which is level 5.
 * After we successfully reach out to the last level, you see in the  `chamber_of_eternity` function is happen **BOF vulnerability** in `fgets` function. The buffer is only take **64 Bytes**, but we can input until **500 Bytes**.
-* So, the objective is very straighforward. After we at the last level, we can do **ret2win attack** to `winTreasure`function to get the flag.
-* But, another problem is we can't directly get the flag until the `eligible` global variable is changed to **1**. How we can change it? Simple, we can jump to the `setEligibility` function first, and then jump to the `winTreasure` function.
+* So, the objective is very straighforward. After we at the last level, we can do **ret2win attack** to `winTreasure` function to get the flag.
+* But, another problem is we can't directly get the flag until the `eligible`  global variable is changed to **1**. How we can change it? Simple, we can jump to the `setEligibility`  function first, and then jump to the `winTreasure`  function.
 * Here's my final exploit script.
 
 {% code title="exploit.py" overflow="wrap" lineNumbers="true" %}
