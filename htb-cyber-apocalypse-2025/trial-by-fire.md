@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Category: Web
 
-Difficulty: Very Easy
+Difficulty: very easy
 {% endhint %}
 
 ## Description

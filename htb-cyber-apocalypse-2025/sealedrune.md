@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Category: Reverse
 
-Difficulty: Very Easy
+Difficulty: very easy
 {% endhint %}
 
 ## Description

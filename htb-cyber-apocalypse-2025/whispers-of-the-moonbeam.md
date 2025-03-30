@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Category: Web
 
-Difficulty: Very Easy
+Difficulty: very easy
 {% endhint %}
 
 ## Description
@@ -16,11 +16,11 @@ Difficulty: Very Easy
 
 ## Solve Walkthrough
 
-When open the web url, type `help` to see list what commands that can we use. There's a lot of commands that can we use, but the `gossip` command is have behavior like `ls` command. We can directly see the `flag.txt` file.
+When open the web url, type `help` to see list what commands that can be use. One command called  `gossip` is behave like `ls` command. The `flag.txt` file is located at the current directory.
 
 <figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
-Okay, now let's find out how to read that `flag.txt` file. Simply, we can use **semicolon as delimiter of second command**. So, the first command: `gossip` is to bypass the command check and `; cat flag.txt` is to read the flag.&#x20;
+Okay, now let's find out how to read that `flag.txt` file. Simply, we can use **semicolon as delimiter of second command**, like regular command injection attack. So, the first command `gossip` is to bypass the command check and `; cat flag.txt` is to read the flag.&#x20;
 
 Here's my POC to read the flag.
 

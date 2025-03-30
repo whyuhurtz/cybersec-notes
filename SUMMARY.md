@@ -25,7 +25,13 @@
 ## International-CTF
 
 * [LITCTF Quals 2024](international-ctf/litctf-quals-2024.md)
-* [OS CTF 2024](international-ctf/os-ctf-2024.md)
+* [OS CTF 2024](international-ctf/os-ctf-2024/README.md)
+  * [Cyber Quiz](international-ctf/os-ctf-2024/cyber-quiz.md)
+  * [The status is being repaired](international-ctf/os-ctf-2024/the-status-is-being-repaired.md)
+  * [Introspection](international-ctf/os-ctf-2024/introspection.md)
+  * [Heads or Tails](international-ctf/os-ctf-2024/heads-or-tails.md)
+  * [Indoor WebApp](international-ctf/os-ctf-2024/indoor-webapp.md)
+  * [Action Notes](international-ctf/os-ctf-2024/action-notes.md)
 * [Snyk FetchTheFlag 2025](international-ctf/snyk-fetchtheflag-2025/README.md)
   * [Zero Ex Six One](international-ctf/snyk-fetchtheflag-2025/zero-ex-six-one.md)
   * [Science 100](international-ctf/snyk-fetchtheflag-2025/science-100.md)

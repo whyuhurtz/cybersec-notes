@@ -1,5 +1,11 @@
 # Readme Please
 
+{% hint style="info" %}
+Category: PWN
+
+Difficulty: easy
+{% endhint %}
+
 ## Description
 
 > I made a very secure file reading service.

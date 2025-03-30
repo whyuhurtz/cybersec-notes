@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Category: PWN
 
-Difficulty: Very Easy
+Difficulty: very easy
 
 _Solved after ended_.
 {% endhint %}
