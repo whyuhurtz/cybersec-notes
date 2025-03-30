@@ -35,7 +35,7 @@ try (ObjectInputStream objectInputStream = new ObjectInputStream(exchange.getReq
 {% endcode %}
 
 * Hal tersebut bisa menyebabkan RCE karena server langsung menerima objek yang diserialkan tanpa memvalidasinya terlebih dulu.
-* Ditambah lagi ada class `Gadget` dan `Command` yang dapat membuat proses eksploitasi lebih mudah. Di mana class `Command` memungkinkan eksekusi perintah sistem secara langsung. Dan class `Gadget` akan memanggil method `run()` dari `Command` saat \`toString()\`\` dipanggil.
+* Ditambah lagi ada class `Gadget` dan `Command` yang dapat membuat proses eksploitasi lebih mudah. Di mana class `Command` memungkinkan eksekusi perintah sistem secara langsung. Dan class `Gadget` akan memanggil method `run()` dari `Command` saat `toString()` dipanggil.
 * Kemudian saya diberikan script `Exploit.java` menggunakan **Reflection** oleh AI untuk mencoba RCE. Setelah beberapa kali penyesuaian karena issue package-package di Java akhirnya bisa juga :)
 * Berikut ini adalah exploit scriptnya:
 
