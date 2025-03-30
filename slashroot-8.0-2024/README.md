@@ -12,7 +12,7 @@ coverY: 0
 
 ## List Solved Challenges
 
-<table><thead><tr><th>Nama Challenge</th><th>Kategori</th><th data-type="rating" data-max="5">Level Kesulit</th><th data-type="content-ref">Link</th></tr></thead><tbody><tr><td>Login Begin</td><td>Web</td><td>1</td><td><a href="login-begin.md">login-begin.md</a></td></tr><tr><td>Go-Ping</td><td>Web</td><td>1</td><td><a href="go-ping.md">go-ping.md</a></td></tr><tr><td>EZZ Momento</td><td>Web</td><td>2</td><td><a href="ezz-momento.md">ezz-momento.md</a></td></tr><tr><td>Package Delivery</td><td>Joy</td><td>1</td><td><a href="package-delivery.md">package-delivery.md</a></td></tr><tr><td>baby-lua</td><td>Rev</td><td>1</td><td><a href="baby-lua.md">baby-lua.md</a></td></tr><tr><td>Find The Key</td><td>Forensic</td><td>1</td><td><a href="find-the-key.md">find-the-key.md</a></td></tr></tbody></table>
+<table><thead><tr><th>Nama Challenge</th><th>Kategori</th><th data-type="rating" data-max="5">Level Kesulitan</th><th data-type="content-ref">Link</th></tr></thead><tbody><tr><td>Login Begin</td><td>Web</td><td>1</td><td><a href="login-begin.md">login-begin.md</a></td></tr><tr><td>Go-Ping</td><td>Web</td><td>1</td><td><a href="go-ping.md">go-ping.md</a></td></tr><tr><td>EZZ Momento</td><td>Web</td><td>2</td><td><a href="ezz-momento.md">ezz-momento.md</a></td></tr><tr><td>Package Delivery</td><td>Joy</td><td>1</td><td><a href="package-delivery.md">package-delivery.md</a></td></tr><tr><td>baby-lua</td><td>Rev</td><td>1</td><td><a href="baby-lua.md">baby-lua.md</a></td></tr><tr><td>Find The Key</td><td>Forensic</td><td>1</td><td><a href="find-the-key.md">find-the-key.md</a></td></tr></tbody></table>
 
 ***
 
