@@ -244,5 +244,5 @@ app.post('/signup', (req, res) => {
 
 ***
 
-**Tags**: #ctf, #misc, #web-exploitation
+**Tags**: #ctf, #misc, #web
 

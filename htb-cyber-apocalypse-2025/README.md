@@ -1,5 +1,7 @@
 ---
 icon: box
+cover: ../.gitbook/assets/htb-cyber-apocalypse-2025.png
+coverY: 0
 ---
 
 # HTB Cyber Apocalypse 2025

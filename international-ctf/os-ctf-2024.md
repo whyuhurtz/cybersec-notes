@@ -171,4 +171,4 @@ The repaired statue image:
 
 ***
 
-**Tags**: #ctf, #misc, #osint, #web-exploitation
+**Tags**: #ctf, #misc, #osint, #web

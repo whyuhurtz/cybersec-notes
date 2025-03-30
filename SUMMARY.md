@@ -26,11 +26,18 @@
 
 * [LITCTF Quals 2024](international-ctf/litctf-quals-2024.md)
 * [OS CTF 2024](international-ctf/os-ctf-2024.md)
-* [Snyk FetchTheFlag 2025](international-ctf/snyk-fetchtheflag-2025.md)
+* [Snyk FetchTheFlag 2025](international-ctf/snyk-fetchtheflag-2025/README.md)
+  * [Zero Ex Six One](international-ctf/snyk-fetchtheflag-2025/zero-ex-six-one.md)
+  * [Science 100](international-ctf/snyk-fetchtheflag-2025/science-100.md)
+  * [Echo](international-ctf/snyk-fetchtheflag-2025/echo.md)
+  * [Additional Information Needed](international-ctf/snyk-fetchtheflag-2025/additional-information-needed.md)
+  * [TimeOff](international-ctf/snyk-fetchtheflag-2025/timeoff.md)
 
 ***
 
-* [Pearl CTF 2025](pearl-ctf-2025.md)
+* [Pearl CTF 2025](pearl-ctf-2025/README.md)
+  * [Treasure Hunt](pearl-ctf-2025/treasure-hunt.md)
+  * [Readme Please](pearl-ctf-2025/readme-please.md)
 * [HTB Cyber Apocalypse 2025](htb-cyber-apocalypse-2025/README.md)
   * [Trial by Fire](htb-cyber-apocalypse-2025/trial-by-fire.md)
   * [Whispers of the Moonbeam](htb-cyber-apocalypse-2025/whispers-of-the-moonbeam.md)
