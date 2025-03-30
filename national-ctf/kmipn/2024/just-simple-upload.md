@@ -25,7 +25,7 @@ echo "<?php echo file_get_contents('flag.txt'); ?>" > get_flag.png
 
 * Upload file tersebut dan nantinya akan tampil flag-nya!
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 3. Flag
 

@@ -31,3 +31,9 @@
 ***
 
 * [Pearl CTF 2025](pearl-ctf-2025.md)
+* [HTB Cyber Apocalypse 2025](htb-cyber-apocalypse-2025/README.md)
+  * [Trial by Fire](htb-cyber-apocalypse-2025/trial-by-fire.md)
+  * [Whispers of the Moonbeam](htb-cyber-apocalypse-2025/whispers-of-the-moonbeam.md)
+  * [EncryptedScroll](htb-cyber-apocalypse-2025/encryptedscroll.md)
+  * [SealedRune](htb-cyber-apocalypse-2025/sealedrune.md)
+  * [Quack Quack](htb-cyber-apocalypse-2025/quack-quack.md)
