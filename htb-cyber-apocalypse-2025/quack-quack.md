@@ -53,7 +53,7 @@ As you can see, this binary is full of protection, except PIE / PIC (Position In
 
 Unlike reverse engineering challenge before, in pwn we've to know the fundamentals of memory layout, such as stack, heap, etc. In this case, vulnerability of the binary is happen in the stack that can cause buffer overflow. But, inside the binary found a protection called "**Stack Canary**". Basically, it just random value located at `$RBP-0x8` (**64-bit**) / `$EBP-0x4` (**32-bit**).
 
-How can we bypass the Stack Canary protection? We've to know that read function in C is not completely safe. The read function is **leakable**, which means that after input is **not ended with NULL terminated string (`\x00`)**. If the string or array of characters is not null terminated string, it can be **leaked some information in the stack**, including _stack canary_. Okay, let's start with decompile the binary.
+How can we bypass the Stack Canary protection? We've to know that read function in C is not completely safe. The read function is **leakable**, which means that after input is **not ended with NULL terminated string** (`\x00`). If the string or array of characters is not null terminated string, it can be **leaked some information in the stack**, including _stack canary_. Okay, let's start with decompile the binary.
 
 {% tabs %}
 {% tab title="main" %}
@@ -196,7 +196,7 @@ void duck_attack(void)
 {% endtab %}
 {% endtabs %}
 
-In the `main` function is only call `duckling` function. If we take a look inside duckling function, we can directly see that it's happen BOF vuln in our first input : `read(0,buffer,0x66)`. But, how can we leak the stack canary ?
+In the `main` function is only call `duckling` function. If we take a look inside `duckling` function, we can directly see that it's happen BOF vuln in our first input : `read(0,buffer,0x66)`. How is that can happen ? You see that in `char buffer [32];` , the program only allocate buffer 32 bytes, but we can overflow it until **0x66 bytes** or **102 bytes in decimal**. Okay, then how can we leak the stack canary ?
 
 Notice that in the `printf("Quack Quack %s, ready to fight the Duck?\n\n> ",chk_substring + 0x20);`  can be leak some information in the stack. It's because the output will print **32 bytes (0x20) more information after `"Quack Quack "` is found**. Okay, let's do a simple math calculation.
 
@@ -294,7 +294,7 @@ Now, we successfully leak the canary. But wait, is that the canary start with th
 [      Buffer     ] // Start input
 ```
 
-After we now the padding of our second input, then we can do **ret2win** attack to call `duck_attack` function and read the flag. So, here's my final exploit script.
+After we know the padding of 2nd input, then we can do **ret2win** attack to call `duck_attack` function and read the flag. So, here's my final exploit script.
 
 {% code title="exploit.py" lineNumbers="true" %}
 ```python
@@ -353,7 +353,7 @@ io.interactive()
 
 <figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
-After several attempts about 3 - 10 times,t hen I can successfully read the flag. Okay, now let's crack the remote machine.
+After several attempts about 3 - 10 times, then I can successfully read the flag. Okay, now let's crack the remote machine.
 
 <figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
