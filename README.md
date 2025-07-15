@@ -1,45 +1,36 @@
 ---
+description: Just a welcome page, you can skip it.
 cover: >-
   https://images.unsplash.com/photo-1564836663277-c4aa761b9882?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw1fHxjeWJlcnxlbnwwfHx8fDE3NDA3ODU3NDB8MA&ixlib=rb-4.0.3&q=85
 coverY: 0
 ---
 
-# 📖 Readme
+# 📖 README
 
-{% hint style="info" %}
-**About Me**
+## 🤙 Yo, wassup.
 
-I am a college student at Jakarta State Polytechnic (PNJ), which has a high passion in cyber security and back-end development. I participated in various Capture the Flag (CTF) competitions to test the extent of my cyber security skills. I’m always committed to continuing to learn and hone my hard skills in related fields so that I can become a professional penetration tester or bug hunter.
-{% endhint %}
-
-## 👋🏻 Welcome
-
-Welcome to my blog!. My blog mostly consists of CTF writeup's, whether national (Indonesia) or international events. Feel free to read my blog and good luck if you find something interesting. 🚩
-
-Actually, my goal is to be a **system administrator** or **DevOps engineer** in the future, but I enjoy playing CTF in my free time. During the CTF events, I mostly handle **pwn** (binary exploitation) and **web exploitation** challenges. For Rev, I don't like it too much because there are cipher and cryptographic things and I'm not good at math. I used AI a lot to help me solving CTF challenges, thank you ChatGPT and DeepSeek. :joy:&#x20;
-
-Yeah, that's all from me, enjoy, and keep learning.🔥
+This gitbook is focused on my CTF writeups. I oftenly played CTF games, either it's national or international events (from [CTF time](https://ctftime.org/)) during weekend. I mostly handle **pwn** (binary exploitation) and **web exploitation** challenges (sometimes also **reverse**). Feel free to read my CTF writeups and I hope it will help you for cracking the challenges. 🚩
 
 ## 🔗 Links
 
 {% tabs %}
-{% tab title="Instagram" %}
-{% embed url="https://instagram.com/whyuhurtz" %}
-{% endtab %}
-
-{% tab title="GitHub" %}
-{% embed url="https://github.com/whyuhurtz" %}
-{% endtab %}
-
-{% tab title="Credly" %}
-[https://www.credly.com/users/wahyu-priambodo](https://www.credly.com/users/wahyu-priambodo)
+{% tab title="Gmail" %}
+[mailto:wahyupriambodo.sec@gmail.com](mailto:wahyupriambodo.sec@gmail.com)
 {% endtab %}
 
 {% tab title="LinkedIn" %}
 {% embed url="https://www.linkedin.com/in/wahyu-priambodo/" %}
 {% endtab %}
 
-{% tab title="Gmail" %}
-[mailto:wahyupriambodo.sec@gmail.com](mailto:wahyupriambodo.sec@gmail.com)
+{% tab title="GitHub" %}
+{% embed url="https://github.com/whyuhurtz" %}
+{% endtab %}
+
+{% tab title="Instagram" %}
+{% embed url="https://instagram.com/whyuhurtz" %}
+{% endtab %}
+
+{% tab title="Credly" %}
+[https://www.credly.com/users/wahyu-priambodo](https://www.credly.com/users/wahyu-priambodo)
 {% endtab %}
 {% endtabs %}
