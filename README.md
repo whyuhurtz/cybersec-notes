@@ -9,7 +9,7 @@ coverY: 0
 
 ## 🤙 Yo, wassup.
 
-This gitbook is focused on my CTF writeups. I oftenly played CTF games, either it's national or international events (from [CTF time](https://ctftime.org/)) during weekend. I mostly handle **pwn** (binary exploitation) and **web exploitation** challenges (sometimes also **reverse**). Feel free to read my CTF writeups and I hope it will help you for cracking the challenges. 🚩
+This gitbook is focused on my CTF writeups. I oftenly played CTF games during weekend, either it's national or international events (from [CTF time](https://ctftime.org/)). I mostly handle **pwn** (binary exploitation) and **web exploitation** challenges (sometimes also **reverse**). Feel free to read my CTF writeups and I hope it will help you for cracking the challenges. 🚩
 
 ## 🔗 Links
 
