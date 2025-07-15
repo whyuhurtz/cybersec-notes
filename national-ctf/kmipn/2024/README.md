@@ -4,6 +4,6 @@ description: KMIPN VI in 2024 was organized by PNJ campus, which is my campus.
 
 # 2024
 
-## No Podium :(
+## Summary
 
-I've put all my works, but I've not been lucky. I finished at position 4. I know it was so close, but I know that God have a better plan. Insya Allah, next year I'll win in KMIPN VII hosted by **State Polytechnic of Padang (PNP)**.
+I and my teammate doing extra efforts, but my team isn't lucky at that moment. My team finished at position 4. I know it was so close, but I know that God have a better plan. InsyaAllah, hopefully, my team will got podium again at **KMIPN VII** at **State Polytechnic of Padang (PNP)**.

@@ -8,21 +8,25 @@ coverY: 0
 
 # Finals Writeup - Jeopardy & Boot2Root
 
-## Jeopardy Writeup by KEITO from National Cyber and Crypto Polytechnic (PSSN)
+## Jeopardy Writeup by KEITO
 
-{% embed url="https://oto.lv.tab.digital/s/8rxb7D877DK3tkQ" %}
-KMIPNVI\_Jeopardy
-{% endembed %}
+<details>
 
-## Boot2Root Writeup by Aezakmi from Batam State Polytechnic (Polibatam)
+<summary>Download PDF</summary>
 
-{% embed url="https://oto.lv.tab.digital/s/ZEBzn42Gd4Bs8Hn" %}
-KMIPNVI\_Boot2Root
-{% endembed %}
+[https://mega.nz/file/zN1GRYCQ#QJmb0ctjhdfR0PoOoI31sO0\_3P\_SxoalCam8-BA\_u2w](https://mega.nz/file/zN1GRYCQ#QJmb0ctjhdfR0PoOoI31sO0_3P_SxoalCam8-BA_u2w)
 
-Other KMIPN VI CTF writeups can be seen at the following url:
+</details>
 
-[https://oto.lv.tab.digital/s/7L3TLLAgj8CroW2](https://oto.lv.tab.digital/s/7L3TLLAgj8CroW2)
+## Boot2Root Writeup by Aezakmi
+
+<details>
+
+<summary>Download PDF</summary>
+
+[https://mega.nz/file/uIVVGIaS#c22HUHte0TR5gX3uMvjb87i1-FPZNGAvpLIwaX-aiqY](https://mega.nz/file/uIVVGIaS#c22HUHte0TR5gX3uMvjb87i1-FPZNGAvpLIwaX-aiqY)
+
+</details>
 
 ***
 

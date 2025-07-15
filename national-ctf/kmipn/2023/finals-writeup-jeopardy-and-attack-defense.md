@@ -10,21 +10,25 @@ coverY: 0
 
 # Finals Writeup - Jeopardy & Attack-Defense
 
-## Jeopardy Writeup by 05-Council from Jakarta State Polytechnic (PNJ)
+## Jeopardy Writeup by 05-Council
 
-{% embed url="https://oto.lv.tab.digital/s/HjMfYkMbLTptgMY" %}
-KMIPNV\_Jeopardy
-{% endembed %}
+<details>
 
-## Attack-Defense Writeup by 05-Council from Jakarta State Polytechnic (PNJ)
+<summary>Download PDF</summary>
 
-{% embed url="https://oto.lv.tab.digital/s/3CxtdAFbEnMKspw" %}
-KMIPNV\_Attack-Defense
-{% endembed %}
+[https://mega.nz/file/jc91jb4B#dp02MZ5BJHbaIrCv5dM2ZIdkM1IzMmQigfz-BEQo60g](https://mega.nz/file/jc91jb4B#dp02MZ5BJHbaIrCv5dM2ZIdkM1IzMmQigfz-BEQo60g)
 
-Other KMIPN V CTF writeups can be seen at the following url:
+</details>
 
-[https://oto.lv.tab.digital/s/P3knfRC3MfJ7P76](https://oto.lv.tab.digital/s/P3knfRC3MfJ7P76)
+## Attack-Defense Writeup by 05-Council
+
+<details>
+
+<summary>Download PDF</summary>
+
+[https://mega.nz/file/CQETXR4I#BlzfDjT00x2jvMJmq7p\_u995BSayDiIrra5GRPmHM8Y](https://mega.nz/file/CQETXR4I#BlzfDjT00x2jvMJmq7p_u995BSayDiIrra5GRPmHM8Y)
+
+</details>
 
 ***
 
