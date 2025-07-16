@@ -1,6 +1,6 @@
 # Table of contents
 
-* [📖 Readme](README.md)
+* [📖 CTF Writeups](README.md)
 
 ## national-ctf
 
